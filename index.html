@@ -4,15 +4,74 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>welcome to joke city</title>
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+    
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('JOKE-background.jpg') fixed;
+      background-size: cover;
+      z-index: -1;
+    }
+    
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 25%; 
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 1;
+      background-color: #39CCCC;
+      width: 50%; 
+      max-width: 600px; 
+      border-radius: 20px; 
+      padding: 50px 20px;
+      animation: float 4s infinite alternate;
+
+    }
+    h1 {
+      color: #f6f6f0; 
+    }
+    p {
+      color: #0a0a0a;
+      font-size: 18px; 
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #FF00FF;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      text-decoration: none;
+      margin-top: 20px;
+      position: relative;
+      bottom: -10px; 
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+  </style>
 </head>
 <body>
-  <div class="background">
-    <div class="container">
-      <h1>JOKE TIME</h1>
-      <div id="jokeDisplay" class="joke"></div>
+  <div class="background"></div>
+  <div class="container">
+    <h1>JOKE TIME</h1>
+      <p id="jokeDisplay" class="joke"></p>
       <button id="generateJoke" class="btn">One More</button>
-    </div>
   </div>
   <script src="script.js"></script>
 </body>
